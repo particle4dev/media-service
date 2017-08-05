@@ -1,0 +1,15 @@
+{
+  "http": {
+    "port": 4000
+  },
+  "db": {
+    "mongo": {
+      "options": {}
+    },
+    "redis": {
+      "start": true
+    }
+  },
+  "cluster": false,
+  "maxClusters": 3
+}
