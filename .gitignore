@@ -29,3 +29,12 @@ node_modules
 
 .sass-cache
 build
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+
+# Module directory
+.terraform/
+
+secret.tfvars
