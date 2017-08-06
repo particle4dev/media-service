@@ -2,5 +2,5 @@
 
 ### Setup infrastructure
 
-> ./bin/setup.sh init
-> ./bin/setup.sh plan
+> ./bin/setup init
+> ./bin/setup plan
