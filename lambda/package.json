@@ -1,0 +1,14 @@
+{
+  "name": "lambda-images",
+  "version": "1.0.0",
+  "author": "Hoang Nam <particle4dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "lodash": "^4.14.2"
+  },
+  "engines": {
+    "node": "6.10.3",
+    "npm": "3.10.10"
+  }
+}
