@@ -3,7 +3,4 @@
 docker run \
   -v $PWD/lambda:/var/task \
   lambci/lambda:build-nodejs6.10 \
-  bash
-
-# lambci/lambda:nodejs6.10 \
-# index.handler '{"some": "event"}'
+  npm install
