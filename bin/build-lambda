@@ -1,6 +1,9 @@
 #!/bin/bash
 
 docker run \
-  -v "$PWD":/var/task \
-  lambci/lambda \
-  index.handler '{"some": "event"}'
+  -v $PWD/lambda:/var/task \
+  lambci/lambda:build-nodejs6.10 \
+  bash
+
+# lambci/lambda:nodejs6.10 \
+# index.handler '{"some": "event"}'
