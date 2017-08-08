@@ -1,5 +1,7 @@
-// 'Hello World' nodejs6.10 runtime AWS Lambda function
 exports.handler = (event, context, callback) => {
+  console.log(event);
+  console.log(context);
+  console.log(callback.toString());
   console.log('Hello, logs!');
   callback(null, 'great success');
 }
