@@ -6,6 +6,7 @@ source $PWD/bin/constant.sh
 docker run \
   -v $PWD/infrastructure:/data \
   -v $PWD/secret.tfvars:/secret.tfvars \
+  -v $PWD/lambda:/lambda \
   -w /data \
   -i -t \
   hashicorp/terraform:light "${@}" -var-file="/secret.tfvars"
