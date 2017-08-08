@@ -1,7 +1,6 @@
 exports.handler = (event, context, callback) => {
-  console.log(event);
-  console.log(context);
-  console.log(callback.toString());
-  console.log('Hello, logs!');
+  console.log('event', JSON.stringify(event));
+  console.log('context', JSON.stringify(context));
+  console.log('callback', JSON.stringify(callback));
   callback(null, 'great success');
 }
