@@ -16,6 +16,9 @@
         "logs:CreateLogStream",
         "logs:PutLogEvents"
       ],
+      "Principal": {
+        "Service": "logs.amazonaws.com"
+      },
       "Resource": "arn:aws:logs:*:*:*"
     }
   ]
