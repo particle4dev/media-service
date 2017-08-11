@@ -29,6 +29,7 @@
     "tape": "^4.6.0"
   },
   "dependencies": {
+    "aws-serverless-express": "^3.0.2",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "cors": "^2.8.1",

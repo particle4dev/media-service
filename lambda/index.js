@@ -1,7 +1,7 @@
-import reserse from './reverse';
+import awsServerlessExpress from 'aws-serverless-express';
+import app from './';
 
-exports.handler = (event, context, callback) => {
-  console.log('Hello, logs!');
-  console.log(reserse('hoang nam'));
-  callback(null, {"Hello":"World"});  // SUCCESS with message
-}
+const server = awsServerlessExpress.createServer(app);
+exports.handler = (event, context) =>
+  awsServerlessExpress.proxy(server, event, context);
+  

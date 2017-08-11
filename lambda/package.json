@@ -4,6 +4,7 @@
   "author": "Hoang Nam <particle4dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "aws-serverless-express": "^3.0.2",
     "express": "^4.14.0",
     "lodash": "^4.14.2"
   },
