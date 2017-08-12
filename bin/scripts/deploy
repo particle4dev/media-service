@@ -1,3 +1,14 @@
 #!/bin/bash
+# https://hub.docker.com/r/hashicorp/terraform/
 
-echo "deploy not implement yet"
+ROOT_DIR=`dirname "$(perl -e 'use Cwd "abs_path"; print abs_path(shift)' $0)"`
+
+. "$ROOT_DIR/../constant"
+
+docker run \
+  -v $R_DIR/infrastructure:/data \
+  -v $R_DIR/secret.tfvars:/secret.tfvars \
+  -v $R_DIR/build:/lambda \
+  -w /data \
+  -i -t \
+  hashicorp/terraform:light "${@}" -var-file="/secret.tfvars"
