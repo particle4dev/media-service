@@ -1,0 +1,5 @@
+Setup and deploy serverless media service on AWS.
+
+Usage:
+  sns [-f <arg>...] [options] [COMMAND] [ARGS...]
+  sns -h|--help

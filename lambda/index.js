@@ -1,5 +1,7 @@
-// 'Hello World' nodejs6.10 runtime AWS Lambda function
-exports.handler = (event, context, callback) => {
-  console.log('Hello, logs!');
-  callback(null, 'great success');
-}
+import awsServerlessExpress from 'aws-serverless-express';
+import app from './app';
+
+const server = awsServerlessExpress.createServer(app);
+exports.handler = (event, context) =>
+  awsServerlessExpress.proxy(server, event, context);
+  

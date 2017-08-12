@@ -1,0 +1,4 @@
+#!/bin/bash
+R_DIR=$(pwd)
+LAMBDA_FOLDER="$R_DIR/lambda"
+BUILD_FOLDER="$R_DIR/build"
