@@ -17,10 +17,10 @@ http://[BucketWebsiteHost]/r300x300/image.png // resize
 ### Command line
 
 ```
-sms setup - Setup key and infrastructure 
+sms setup - Setup key and infrastructure
 sms build - Build lambda source code (npm install)
 sns deploy - Deploy lambda function to aws
-sns generate - 
+sns generate -
 sns test - run test
-sns dev - 
+sns dev -
 ```
