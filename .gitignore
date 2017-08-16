@@ -38,3 +38,5 @@ build
 .terraform/
 
 secret.tfvars
+
+*.zip
