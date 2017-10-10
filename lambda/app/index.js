@@ -7,6 +7,8 @@ const S3 = new AWS.S3({
 });
 
 app.get('/', (req, res) => {
+  res.sendFile(`${__dirname}/sam-logo.png`)
+  return;
 
   S3.getObject({Bucket: 'media.particle4dev.com', Key: 'origin/logo.png'}).promise()
   .then((data) => {
@@ -30,8 +32,9 @@ app.get('/', (req, res) => {
     res.setHeader('Content-Length', data.ContentLength);
     // res.status(200).json({ success: true });
     // res.isBase64Encoded = true;
-
-    res.end(data.Body);
+    const file = new Buffer(data.Body, 'binary');
+    const attachment = file.toString('base64');
+    res.send(attachment);
     // res.status(200).end(data.Body.toString('base64'));
     // res.end(data.Body.toString('base64'), 'binary');
   })
